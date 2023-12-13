@@ -105,52 +105,110 @@ export default {
 </script>
 
 <style scoped>
-.app {
-  text-align: center;
-  height: 60vh;
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #3498db;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #ecf0f1;
-  color: #333;
+  :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.input-container {
-  margin: 10px 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem = 10px(62.5%) */
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 32rem;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 1.1;
 }
 
 button {
-  margin-top: 10px;
-  padding: 10px;
-  margin-right: 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
   cursor: pointer;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#app {
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .action-btn {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  gap: 2rem;
+}
+
+
+.action-btn > button {
+  width: 14rem;
+  height: 3.2rem;
 }
 
 .change-btn {
-  background-color: #27ae60;
+  background-color: green;
 }
 
 .reset-btn {
-  background-color: #e74c3c;
+  background-color: red;
 }
 
-h1 {
-  font-size: 24px;
-  color: #3498db;
-  margin-bottom: 10px;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
 }
+
+
 </style>
